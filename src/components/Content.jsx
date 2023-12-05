@@ -20,7 +20,7 @@ const Content = () => {
 						<span></span>
 
 						<h3>Based in Moscow <br />I'm developer and a little bit designer</h3>
-						<h4>Hey, are you looking for developer to your projects?<br />You can rely on me!</h4>
+						<h4>Are you looking for developer to your projects?<br />You can rely on me!</h4>
 
 						<a href="#" target="_blank" rel="noopener noreferrer">
 							Download CV
