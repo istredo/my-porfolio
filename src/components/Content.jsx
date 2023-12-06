@@ -15,16 +15,16 @@ const Content = () => {
 							<span className='button__line button__line--bottom'></span>
 							<span className='button__line button__line--left'></span>
 						</a>
+
 					</div>
 					<div className="right">
-						<span></span>
+						<h4 className='descVisible'>Are you looking for developer to your projects?<br />You can rely on me!</h4>
 
-						<h3>Based in Moscow <br />I'm developer and a little bit designer</h3>
-						<h4>Are you looking for developer to your projects?<br />You can rely on me!</h4>
-
-						<a href="#" target="_blank" rel="noopener noreferrer">
+						<a className='download__CV' href="#" target="_blank" rel="noopener noreferrer">
 							Download CV
-							{/* svg download */}
+							<svg className='download__svg' xmlns="http://www.w3.org/2000/svg" width='40' fill="none" viewBox="0 0 24 24">
+								<path stroke="#009b77" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 21H3m15-10-6 6m0 0-6-6m6 6V3" />
+							</svg>
 						</a>
 					</div>
 				</div>
