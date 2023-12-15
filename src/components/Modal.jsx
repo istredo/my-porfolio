@@ -13,6 +13,7 @@ const Modal = ({ open, setOpen }) => {
 		{ id: 2, title: "pizza", description: "some pizza description", url: "my-pizza-istredo.vercel.app", img: '/img/pizza.png' },
 		{ id: 3, title: "hotel", description: "some hotel description", url: "https://hotel-app-mauve.vercel.app/", img: '/img/hotel.png' },
 		{ id: 4, title: "parallax", description: "some parallax description", url: "https://istredo.github.io/Magic-forest-parallax-/", img: '/img/forest.png' },
+		{ id: 5, title: "gallery", description: "some gallery description", url: "gallery-istredo.vercel.app", img: '/img/gallery.png' },
 	]
 
 	return (

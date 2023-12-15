@@ -31,6 +31,283 @@ body {
 	position: relative;
 }
 
+// _____________ content __________________
+
+header {
+	.header__container {
+		display: flex;
+		justify-content: space-between;
+		height: 7vh;
+		padding-top: 2vh;
+
+		.mail {
+			font-weight: 500;
+			font-size: 1.3rem;
+		}
+		.nav {
+			cursor: pointer;
+			font-size: 1.7rem;
+			text-shadow: 0px 0px 12px $accent;
+		}
+		.nav:hover {
+			text-shadow:
+				0px 0px 1px $black,
+				0px 0px 20px $accent;
+		}
+	}
+}
+.content {
+	flex: 1 0 auto;
+	display: flex;
+	font-size: 1.1rem;
+	.left {
+		display: flex;
+		flex-direction: column;
+	}
+	.right {
+		display: flex;
+		flex-direction: column;
+		.download__CV {
+			margin-top: 20px;
+			color: $accent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.6rem;
+			letter-spacing: 1.5px;
+			text-decoration: none;
+			border: 2px solid transparent;
+			border-radius: 3px;
+			padding: 5px 0;
+			transition: 0.5s;
+			.download__svg {
+				opacity: 0;
+				transition: 0.5s;
+			}
+		}
+		.download__CV:active /* активная/посещенная ссылка */ {
+			text-decoration: none;
+			color: $accent;
+		}
+
+		.download__CV:hover  /* при наведении */ {
+			text-decoration: none;
+			color: $accent;
+			border: 2px solid $accent;
+			transition: 1s;
+			box-shadow:
+				0px 0px 10px $accent,
+				0px 0px 20px $accent;
+			.download__svg {
+				opacity: 1;
+				transition: 1s;
+			}
+		}
+	}
+	h2 {
+		margin-bottom: 2vh;
+		font-size: 5rem;
+		span {
+			color: $accent;
+			font-size: 5.5rem;
+		}
+	}
+	h3 {
+		margin-bottom: 2vh;
+		font-size: 3.2rem;
+	}
+	h4 {
+		font-size: 2.1rem;
+	}
+	.content__container {
+		display: flex;
+		flex-direction: columns;
+		justify-content: space-between;
+	}
+}
+
+footer {
+	padding-bottom: 2vh;
+	a:hover {
+		filter: drop-shadow(0 0 2px $accent);
+	}
+}
+
+.button__contact {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 3px;
+	overflow: hidden;
+	color: $accent;
+	font-size: 1.8rem;
+	transition: 0.2s;
+	border-radius: 5px;
+	.button__line {
+		position: absolute;
+		display: block;
+	}
+	.button__line--top {
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, $accent);
+	}
+	.button__line--right {
+		right: 0;
+		bottom: 100%;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(180deg, transparent, $accent);
+	}
+	.button__line--bottom {
+		bottom: 0;
+		left: 100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(270deg, transparent, $accent);
+	}
+	.button__line--left {
+		bottom: -100%;
+		left: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(0deg, transparent, $accent);
+	}
+}
+.button__contact:hover {
+	box-shadow:
+		0 0 20px $accent,
+		0 0 40px $accent;
+	transition-delay: 1.2s;
+	background-color: $accent;
+	color: $white;
+	.button__line--top {
+		left: 100%;
+		transition: 1s;
+		transition-delay: 0.25s;
+	}
+	.button__line--right {
+		bottom: -100%;
+		transition: 1s;
+		transition-delay: 0.46s;
+	}
+	.button__line--bottom {
+		left: -100%;
+		transition: 1s;
+		transition-delay: 0.67s;
+	}
+	.button__line--left {
+		bottom: 100%;
+		transition: 1s;
+		transition-delay: 0.88s;
+	}
+}
+
+.modal {
+	.modal__bg {
+		background-color: rgba(97, 110, 110, 0.9);
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		z-index: -1;
+		opacity: 0;
+		transition: 500ms ease-in;
+	}
+
+	.modal__container {
+		background-color: $white-bg;
+		border-radius: 20px;
+		padding: 15px 20px 20px 20px;
+		z-index: 10;
+		position: relative;
+		overflow: hidden;
+
+		transform: scale(0.2);
+		transition: 0.5s ease-in;
+	}
+	.overlayActive {
+		opacity: 1;
+		z-index: 9;
+		transition: 500ms ease-in;
+	}
+	.itemActive {
+		transform: scale(1);
+		transition: 0.5s ease-in;
+	}
+	.btn__close {
+		padding: 5px 10px;
+		position: absolute;
+		width: 50px;
+		top: 20vh;
+		right: 10vw;
+		border-radius: 50%;
+		border-color: transparent;
+		cursor: pointer;
+	}
+
+	.list__container {
+		color: $accent;
+
+		gap: 2vw;
+		.modal__item {
+			transition: 0.3s;
+			cursor: pointer;
+			overflow: hidden;
+			position: relative;
+
+			.modal__img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+			.modal__title {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				opacity: 1;
+				transition: 0.2s;
+				font-size: 1.8rem;
+			}
+			.modal__desc {
+				font-size: 1.4rem;
+				color: $white;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				opacity: 0;
+				width: 100%;
+
+				transition: 0.5s;
+			}
+		}
+		.modal__item:hover {
+			transform: scale(0.9);
+			transition: 0.5s;
+			max-width: 50vw;
+
+			.modal__title {
+				opacity: 0;
+				transition: 0.2s;
+			}
+			.modal__desc {
+				opacity: 1;
+				transition: 0.5s;
+				text-align: center;
+				background-color: rgba(97, 110, 110, 0.8);
+			}
+		}
+	}
+}
+
 // -----------------------------------
 
 @media (min-width: 1441px) {
@@ -183,289 +460,3 @@ body {
 }
 
 // ______________________________
-
-.header__container {
-	display: flex;
-	justify-content: space-between;
-	height: 7vh;
-	padding-top: 2vh;
-
-	.mail {
-		font-weight: 500;
-		font-size: 1.3rem;
-	}
-	.nav {
-		cursor: pointer;
-		font-size: 1.7rem;
-	}
-}
-// .header__circle{
-// 	height:600px;
-// 	width: 600px;
-// 	border-radius: 50%;
-// 	position: absolute;
-// 	box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;
-// 	display: inline-block;
-// 	bottom: -10vh;
-// 	right: -25vw;
-// }
-// .header__circle::after{
-// 	background-color: rgba(255, 255, 255, 0.3);
-//   content: '';
-//   height: 45%;
-//   width: 12%;
-//   position: absolute;
-//   top: 4%;
-//   left: 15%;
-//   border-radius: 50%;
-//   transform: rotate(40deg);
-// }
-
-.content {
-	flex: 1 0 auto;
-	display: flex;
-	font-size: 1.1rem;
-	.left {
-		display: flex;
-		flex-direction: column;
-	}
-	.right {
-		display: flex;
-		flex-direction: column;
-		.download__CV {
-			margin-top: 20px;
-			color: $accent;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-weight: 500;
-			font-size: 1.6rem;
-			text-decoration: none;
-			border: 2px solid transparent;
-			border-radius: 3px;
-			padding: 5px 0;
-			transition: 0.5s;
-			.download__svg {
-				opacity: 0;
-				transition: 0.5s;
-			}
-		}
-		.download__CV:active /* активная/посещенная ссылка */ {
-			text-decoration: none;
-			color: $accent;
-		}
-
-		.download__CV:hover  /* при наведении */ {
-			text-decoration: none;
-			color: $accent;
-			border: 2px solid $accent;
-			transition: 1s;
-			box-shadow:
-				0px 0px 10px $accent,
-				0px 0px 20px $accent;
-			.download__svg {
-				opacity: 1;
-				transition: 1s;
-			}
-		}
-	}
-	h2 {
-		margin-bottom: 2vh;
-		font-size: 5rem;
-		span {
-			color: $accent;
-			font-size: 5.5rem;
-		}
-	}
-	h3 {
-		margin-bottom: 2vh;
-		font-size: 3.2rem;
-	}
-	h4 {
-		font-size: 2.1rem;
-	}
-	.content__container {
-		display: flex;
-		flex-direction: columns;
-		justify-content: space-between;
-	}
-}
-
-footer {
-	padding-bottom: 2vh;
-}
-
-.button__contact {
-	position: relative;
-	display: inline-block;
-	text-decoration: none;
-	text-align: center;
-	letter-spacing: 3px;
-	overflow: hidden;
-	color: $accent;
-	font-size: 1.8rem;
-	transition: 0.2s;
-	border-radius: 5px;
-	.button__line {
-		position: absolute;
-		display: block;
-	}
-	.button__line--top {
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 2px;
-		background: linear-gradient(90deg, transparent, $accent);
-	}
-	.button__line--right {
-		right: 0;
-		bottom: 100%;
-		width: 2px;
-		height: 100%;
-		background: linear-gradient(180deg, transparent, $accent);
-	}
-	.button__line--bottom {
-		bottom: 0;
-		left: 100%;
-		width: 100%;
-		height: 2px;
-		background: linear-gradient(270deg, transparent, $accent);
-	}
-	.button__line--left {
-		bottom: -100%;
-		left: 0;
-		width: 2px;
-		height: 100%;
-		background: linear-gradient(0deg, transparent, $accent);
-	}
-}
-.button__contact:hover {
-	box-shadow:
-		0 0 20px $accent,
-		0 0 40px $accent;
-	transition-delay: 1.2s;
-	background-color: $accent;
-	color: $white;
-	.button__line--top {
-		left: 100%;
-		transition: 1s;
-		transition-delay: 0.25s;
-	}
-	.button__line--right {
-		bottom: -100%;
-		transition: 1s;
-		transition-delay: 0.46s;
-	}
-	.button__line--bottom {
-		left: -100%;
-		transition: 1s;
-		transition-delay: 0.67s;
-	}
-	.button__line--left {
-		bottom: 100%;
-		transition: 1s;
-		transition-delay: 0.88s;
-	}
-}
-
-.modal {
-	.modal__bg {
-		background-color: rgba(97, 110, 110, 0.9);
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-		z-index: -1;
-		opacity: 0;
-		transition: 500ms ease-in;
-	}
-
-	.modal__container {
-		background-color: $white-bg;
-		border-radius: 20px;
-		padding: 15px 20px 20px 20px;
-		z-index: 10;
-		position: relative;
-		overflow: hidden;
-
-		transform: scale(0.2);
-		transition: 0.5s ease-in;
-	}
-	.overlayActive {
-		opacity: 1;
-		z-index: 9;
-		transition: 500ms ease-in;
-	}
-	.itemActive {
-		transform: scale(1);
-		transition: 0.5s ease-in;
-	}
-	.btn__close {
-		padding: 5px 10px;
-		position: absolute;
-		width: 50px;
-		top: 20vh;
-		right: 10vw;
-		border-radius: 50%;
-		border-color: transparent;
-		cursor: pointer;
-	}
-
-	.list__container {
-		color: $accent;
-
-		gap: 2vw;
-		.modal__item {
-			transition: 0.5s;
-
-			overflow: hidden;
-			position: relative;
-
-			.modal__img {
-				object-fit: cover;
-				width: 100%;
-				height: 100%;
-			}
-			.modal__title {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				opacity: 1;
-				transition: 0.2s;
-				font-size: 1.8rem;
-			}
-			.modal__desc {
-				font-size: 1.4rem;
-				color: $white;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				opacity: 0;
-				width: 100%;
-
-				transition: 0.5s;
-			}
-		}
-		.modal__item:hover {
-			transform: scale(0.9);
-			transition: 0.5s;
-			max-width: 50vw;
-
-			.modal__title {
-				opacity: 0;
-				transition: 0.2s;
-			}
-			.modal__desc {
-				opacity: 1;
-				transition: 0.5s;
-				text-align: center;
-				background-color: rgba(97, 110, 110, 0.8);
-			}
-		}
-	}
-}
