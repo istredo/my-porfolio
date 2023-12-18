@@ -222,9 +222,23 @@ footer {
 		opacity: 0;
 		transition: 500ms ease-in;
 	}
-
+	.modal__closeBtn {
+		border: none;
+		position: absolute;
+		background-color: transparent;
+		top: 15vh;
+		right: 10vw;
+		cursor: pointer;
+		.btn__close {
+			padding: 5px 10px;
+			width: 50px;
+			border-radius: 50%;
+			border-color: transparent;
+		}
+	}
 	.modal__container {
-		background-color: $white-bg;
+		// background-color: $white-bg;
+		background-color: transparent;
 		border-radius: 20px;
 		padding: 15px 20px 20px 20px;
 		z-index: 10;
@@ -242,16 +256,6 @@ footer {
 	.itemActive {
 		transform: scale(1);
 		transition: 0.5s ease-in;
-	}
-	.btn__close {
-		padding: 5px 10px;
-		position: absolute;
-		width: 50px;
-		top: 20vh;
-		right: 10vw;
-		border-radius: 50%;
-		border-color: transparent;
-		cursor: pointer;
 	}
 
 	.list__container {
@@ -290,8 +294,8 @@ footer {
 			}
 		}
 		.modal__item:hover {
-			transform: scale(0.9);
-			transition: 0.5s;
+			transform: scale(0.95);
+			transition: 0.8s;
 			max-width: 50vw;
 
 			.modal__title {
