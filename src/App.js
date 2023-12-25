@@ -9,13 +9,16 @@ import Modal from './components/Modal';
 
 function App() {
 	const [open, setOpen] = React.useState(false);
-
+	const [theme, setTheme] = React.useState(() => {
+		const mode = JSON.parse(localStorage.getItem('theme'))
+		return mode || 'light'
+	});
 
 	return (
-		<div className="App">
+		<div className="App" id={theme}>
 			<Header open={open} setOpen={setOpen} />
 			<Content />
-			<Footer />
+			<Footer theme={theme} setTheme={setTheme} />
 			<Modal open={open} setOpen={setOpen} />
 		</div>
 	);
