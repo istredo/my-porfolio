@@ -28,13 +28,18 @@ body {
 	margin: 0 auto;
 	position: relative;
 }
+a:active,
+a:hover,
+a {
+	text-decoration: none;
+}
 
 // _____________ themes __________________
 
 #dark {
 	background-color: $black-bg;
 	color: $white;
-	background-image: url(../../public/img/photo__black1.png);
+	background-image: url(../../public/img/photo__black.png);
 }
 
 #light {
@@ -87,7 +92,7 @@ header {
 			justify-content: center;
 			font-size: 1.6rem;
 			letter-spacing: 1.5px;
-			text-decoration: none;
+
 			border: 2px solid transparent;
 			border-radius: 3px;
 			padding: 5px 0;
@@ -97,13 +102,11 @@ header {
 				transition: 0.5s;
 			}
 		}
-		.download__CV:active /* активная/посещенная ссылка */ {
-			text-decoration: none;
+		.download__CV:active {
 			color: $accent;
 		}
 
-		.download__CV:hover  /* при наведении */ {
-			text-decoration: none;
+		.download__CV:hover {
 			color: $accent;
 			border: 2px solid $accent;
 			transition: 1s;
@@ -203,7 +206,6 @@ footer {
 .button__contact {
 	position: relative;
 	display: inline-block;
-	text-decoration: none;
 	text-align: center;
 	letter-spacing: 3px;
 	overflow: hidden;
@@ -327,15 +329,13 @@ footer {
 	}
 
 	.list__container {
-		color: $accent;
-
 		gap: 2vw;
 		.modal__item {
 			transition: 0.3s;
 			cursor: pointer;
 			overflow: hidden;
 			position: relative;
-
+			color: $accent;
 			.modal__img {
 				object-fit: cover;
 				width: 100%;
@@ -348,6 +348,11 @@ footer {
 				opacity: 1;
 				transition: 0.2s;
 				font-size: 1.8rem;
+				background-color: $black;
+				border-top-right-radius: 15px;
+				padding: 0 10px 0 5px;
+				background-color: $accent;
+				color: $white;
 			}
 			.modal__desc {
 				font-size: 1.4rem;
@@ -357,6 +362,7 @@ footer {
 				left: 0;
 				opacity: 0;
 				width: 100%;
+				padding-top: 15px;
 
 				transition: 0.5s;
 			}
