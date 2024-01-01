@@ -1,14 +1,20 @@
 import React from 'react'
 
-const Footer = ({ theme, setTheme }) => {
+import { useSelector, useDispatch } from 'react-redux'
+import { themeLight, themeDark } from '../redux/slices/themeSlice'
+
+const Footer = () => {
 	let toggleRef = React.useRef();
 
+	const themes = useSelector((state) => state.theme.theme)
+	const dispatch = useDispatch()
+
+
 	const themesHandler = () => {
-		setTheme((cur) => {
-			const newTheme = cur === 'light' ? 'dark' : 'light';
-			localStorage.setItem('theme', JSON.stringify(newTheme));
-			return newTheme
-		})
+
+		const newTheme = themes === 'light' ? dispatch(themeDark()) : dispatch(themeLight());
+		localStorage.setItem('theme', JSON.stringify(newTheme));
+		return newTheme
 	}
 
 	return (
@@ -31,7 +37,7 @@ const Footer = ({ theme, setTheme }) => {
 
 					</div>
 					<div className="switch">
-						<input ref={toggleRef} onClick={themesHandler} type="checkbox" id="toggle__button" className="toggle__button" checked={theme === 'light' ? '' : 'checked'} onChange={() => { }} />
+						<input ref={toggleRef} onClick={themesHandler} type="checkbox" id="toggle__button" className="toggle__button" checked={themes === 'light' ? '' : 'checked'} onChange={() => { }} />
 						<label htmlFor="toggle__button" className="text">Switch theme</label>
 					</div>
 
@@ -43,3 +49,4 @@ const Footer = ({ theme, setTheme }) => {
 }
 
 export default Footer
+
