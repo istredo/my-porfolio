@@ -11,7 +11,6 @@ const Footer = () => {
 
 
 	const themesHandler = () => {
-
 		const newTheme = themes === 'light' ? dispatch(themeDark()) : dispatch(themeLight());
 		localStorage.setItem('theme', JSON.stringify(newTheme));
 		return newTheme

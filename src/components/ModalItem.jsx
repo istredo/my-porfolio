@@ -1,13 +1,20 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { testOpen } from '../redux/slices/testSlice'
+
+
 
 const ModalItem = (props) => {
 
+	const dispatch = useDispatch()
+
+
 	return (
-		<a className="modal__item" href={props.url} target="_blank" rel="noopener noreferrer">
+		<div className="modal__item" onClick={() => dispatch(testOpen(props.id))}>
 			<img className='modal__img' src={props.img} alt={props.title} />
 			<h4 className='modal__title'>{props.title}</h4>
-			<h5 className='modal__desc'>{props.description}</h5>
-		</a>
+
+		</div>
 	)
 }
 

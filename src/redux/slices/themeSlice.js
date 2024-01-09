@@ -2,6 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 
 let parseStorage = function () {
 	let mode = JSON.parse(localStorage.getItem('theme'))
+	if (!mode) {
+		return 'light'
+	}
 	return mode.type === "theme/themeDark" ? 'dark' : 'light'
 }
 

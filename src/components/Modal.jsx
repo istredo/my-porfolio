@@ -2,22 +2,13 @@ import React from 'react'
 import ModalItem from './ModalItem'
 import { useSelector, useDispatch } from 'react-redux'
 import { modalClose } from '../redux/slices/modalSlice'
+import { modalList } from '../utils/modalList'
 
 
 const Modal = () => {
 
 	const modal = useSelector((state) => state.modal.open)
 	const dispatch = useDispatch()
-
-
-	const modalList = [
-		{ id: 0, title: "allods", description: "Тестовое задание в astrum entertaiment", url: "https://allods.vercel.app/", img: '/img/allods.png' },
-		{ id: 1, title: "shoes", description: "Магазин обуви. React, Axios, SCSS ", url: "", img: '/img/shoes.png' },
-		{ id: 2, title: "pizza", description: "Крупное приложение по заказу пиццы. React, Axios, SCSS, Redux, Адаптивная верстка.", url: "https://my-pizza-istredo.vercel.app", img: '/img/pizza.png' },
-		{ id: 3, title: "hotel", description: "Сайт-визитка отеля. С возможностью бронирования номеров. Вся информация о клиенте передается через телеграм-бота.", url: "https://hotel-app-mauve.vercel.app/", img: '/img/hotel.png' },
-		{ id: 4, title: "parallax", description: "Верстка сайта с эффектом паралакс", url: "https://istredo.github.io/Magic-forest-parallax-/", img: '/img/forest.png' },
-		{ id: 5, title: "gallery", description: "Шаблон галлереи с интересной механикой", url: "https://gallery-istredo.vercel.app", img: '/img/gallery.png' },
-	]
 
 	return (
 		<div className='modal'>
@@ -29,13 +20,14 @@ const Modal = () => {
 				<div className={modal ? 'modal__container itemActive' : 'modal__container'} onClick={e => e.stopPropagation()}>
 					<div className='list__container'>
 						{
-							modalList.map((item) => (<ModalItem key={item.title} title={item.title} description={item.description} url={item.url} img={item.img} />))
+							modalList.map((item) => (<ModalItem key={item.title} id={item.id} title={item.title} description={item.description} url={item.url} img={item.img} />))
 						}
 					</div>
 				</div>
 
 			</div>
-		</div>
+
+		</div >
 	)
 }
 

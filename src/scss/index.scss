@@ -536,3 +536,57 @@ footer {
 }
 
 // ______________________________
+
+.details__modal {
+	.details__bg {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		z-index: -1;
+		opacity: 0;
+		transition: 0.5s ease-in;
+	}
+	.details__active {
+		opacity: 1;
+		transition: 0.5s ease-in;
+		z-index: 100;
+	}
+	.details__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		.details__picture {
+			position: relative;
+			width: 70vw;
+			height: 70vh;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			margin-bottom: 2vh;
+		}
+		.details__desc {
+			font-size: 1.4rem;
+			color: $white;
+			margin-bottom: 1vh;
+			max-width: 70vw;
+		}
+		.details__url {
+			font-size: 1.1rem;
+			font-weight: 600;
+			color: $accent;
+			border-bottom: 1px solid transparent;
+			transition: 0.5s;
+		}
+		.details__url:hover {
+			border-bottom: 1px solid $accent;
+			transition: 0.5s;
+		}
+	}
+}

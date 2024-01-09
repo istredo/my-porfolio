@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
+import ModalDetails from './components/ModalDetails';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 			<Content />
 			<Footer />
 			<Modal />
+			<ModalDetails />
 		</div>
 	);
 }
