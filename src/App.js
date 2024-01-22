@@ -1,8 +1,7 @@
 import React from 'react';
-import './scss/index.scss';
 import { useSelector } from 'react-redux'
 
-
+import './scss/index.scss';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';

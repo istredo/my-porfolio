@@ -317,6 +317,9 @@ footer {
 
 		transform: scale(0.2);
 		transition: 0.5s ease-in;
+		.desc {
+			text-align: center;
+		}
 	}
 	.overlayActive {
 		opacity: 1;
