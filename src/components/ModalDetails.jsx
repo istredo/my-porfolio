@@ -11,7 +11,6 @@ const ModalDetails = () => {
 	const testOpen = useSelector((state) => state.test.open)
 	let list = modalList[testId]
 
-
 	return (
 		<div className="details__modal">
 			<div className={testOpen ? "details__bg details__active" : "details__bg"} onClick={() => dispatch(testClose())}>
