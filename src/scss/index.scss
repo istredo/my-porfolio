@@ -373,11 +373,11 @@ footer {
 		.modal__item:hover {
 			transform: scale(0.95);
 			transition: 0.8s;
-			// max-width: 50vw;
 
 			.modal__title {
 				opacity: 0;
-				transition: 0.2s;
+				transform: translateY(90%);
+				transition: 0.4s;
 			}
 			.modal__desc {
 				opacity: 1;
