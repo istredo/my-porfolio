@@ -402,6 +402,7 @@ footer {
 		z-index: -1;
 		opacity: 0;
 		transition: 0.5s ease-in;
+		background-color: $modal;
 	}
 	.details__active {
 		opacity: 1;
@@ -427,6 +428,11 @@ footer {
 			color: $white;
 			margin-bottom: 1vh;
 			max-width: 70vw;
+		}
+		.details__refs {
+			display: flex;
+			width: 50%;
+			justify-content: space-around;
 		}
 		.details__url {
 			font-size: 1.1rem;

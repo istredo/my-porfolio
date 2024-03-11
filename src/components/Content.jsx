@@ -15,7 +15,6 @@ const Content = () => {
 							<span className='button__line button__line--bottom'></span>
 							<span className='button__line button__line--left'></span>
 						</a>
-
 					</div>
 					<div className="right">
 						<h4 className='descVisible'>Are you looking for developer to your projects?<br />You can rely on me!</h4>
