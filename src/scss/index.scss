@@ -60,6 +60,13 @@ header {
 		.mail {
 			font-weight: 500;
 			font-size: 1.3rem;
+			transition: 0.2s;
+			&:hover {
+				text-shadow:
+					0 0 20px $accent,
+					0 0 40px $accent;
+				transition: 0.2s;
+			}
 		}
 		.nav {
 			cursor: pointer;
