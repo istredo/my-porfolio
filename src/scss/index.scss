@@ -523,6 +523,7 @@ footer {
 	}
 
 	.button__contact {
+		margin-top: 20px;
 		width: 220px;
 		height: 60px;
 		padding: 15px 15px;
@@ -544,7 +545,8 @@ footer {
 	footer {
 		svg {
 			width: 60px;
-			margin: 2vw 3vw;
+			margin: 0 3vw;
+			width: 40px;
 		}
 	}
 }
