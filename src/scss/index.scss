@@ -604,4 +604,11 @@ footer {
 			margin-top: 50px;
 		}
 	}
+	.switch {
+		display: flex;
+		flex-direction: column-reverse;
+		.text {
+			margin: -10px 0 5px -10px;
+		}
+	}
 }
