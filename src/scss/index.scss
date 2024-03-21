@@ -18,7 +18,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: bottom center;
@@ -32,6 +31,13 @@ a:active,
 a:hover,
 a {
 	text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+	/* Предполагаемая высота поисковой строки на iPhone */
+	body {
+		padding-top: constant(safe-area-inset-top); /* Для учета верхней области, включая поисковую строку */
+		padding-bottom: constant(safe-area-inset-bottom); /* Для учета нижней области, если есть панель навигации */
+	}
 }
 
 // _____________ themes __________________
@@ -73,12 +79,20 @@ header {
 			font-size: 1.7rem;
 			text-shadow: 0px 0px 12px $accent;
 		}
-		.nav:hover {
-			text-shadow:
-				0px 0px 1px $black,
-				0px 0px 20px $accent;
-		}
 	}
+}
+#dark .nav:hover {
+	text-shadow:
+		0px 0px 2px $white,
+		0px 0px 5px $accent,
+		0px 0px 10px $accent,
+		0px 0px 15px $accent;
+}
+#light .nav:hover {
+	text-shadow:
+		0px 0px 1px $black,
+		0px 0px 10px $accent,
+		0px 0px 15px $accent;
 }
 .content {
 	flex: 1 0 auto;
@@ -149,16 +163,21 @@ header {
 }
 
 footer {
-	padding-bottom: 2vh;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 2vh 0;
+	background-color: rgba(0, 0, 0, 0.2);
 	a:hover {
 		filter: drop-shadow(0 0 2px $accent);
 	}
 	.footer__container {
 		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		.switch {
-			position: absolute;
-			top: 0;
-			right: 0;
 			display: flex;
 			align-items: center;
 			.toggle__button {
@@ -311,6 +330,9 @@ footer {
 			width: 50px;
 			border-radius: 50%;
 			border-color: transparent;
+		}
+		&:hover {
+			filter: drop-shadow(0 0 6px $accent);
 		}
 	}
 	.modal__container {
@@ -598,7 +620,7 @@ footer {
 	}
 	.right {
 		width: 40%;
-		height: 80vh;
+		height: 60vh;
 		justify-content: flex-start;
 		h4 {
 			margin-top: 50px;
