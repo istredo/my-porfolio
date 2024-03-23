@@ -13,6 +13,9 @@ const ModalDetails = () => {
 	return (
 		<div className="details__modal">
 			<div className={open ? "details__bg details__active" : "details__bg"} onClick={() => dispatch(descModalClose())}>
+				<button className="modal__closeBtn" onClick={() => dispatch(descModalClose())} >
+					<svg className="btn__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#009b77" strokeWidth="1.5"></circle> <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke="#009b77" strokeWidth="1.5" strokeLinecap="round"></path> </g></svg>
+				</button>
 				<div className="details__container" >
 					<div className="details__picture" style={{ backgroundImage: `url(${list.img})` }}></div>
 					<h5 className='details__desc'>{list.description}</h5>
