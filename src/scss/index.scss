@@ -26,6 +26,7 @@ body {
 	width: $container-width;
 	margin: 0 auto;
 	position: relative;
+	max-width: 1920px;
 }
 a:active,
 a:hover,
@@ -105,6 +106,7 @@ header {
 	.right {
 		display: flex;
 		flex-direction: column;
+		max-width: 470px;
 		.download__CV {
 			margin-top: 20px;
 			color: $accent;
@@ -118,6 +120,8 @@ header {
 			border-radius: 3px;
 			padding: 5px 0;
 			transition: 0.5s;
+			background-color: transparent;
+			cursor: pointer;
 			.download__svg {
 				opacity: 0;
 				transition: 0.5s;
@@ -168,7 +172,7 @@ footer {
 	left: 0;
 	right: 0;
 	padding: 2vh 0;
-	background-color: rgba(0, 0, 0, 0.2);
+	// background-color: rgba(0, 0, 0, 0.2);
 	a:hover {
 		filter: drop-shadow(0 0 2px $accent);
 	}
@@ -239,6 +243,11 @@ footer {
 	font-size: 1.8rem;
 	transition: 0.2s;
 	border-radius: 5px;
+
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 	.button__line {
 		position: absolute;
 		display: block;
@@ -635,6 +644,10 @@ footer {
 	}
 }
 @media (max-width: 576px) {
+	.logo {
+		width: 40px;
+		height: 30px;
+	}
 	.modal {
 		.modal__container {
 			width: 94vw;
@@ -657,17 +670,44 @@ footer {
 		top: 1vh;
 		right: 1vw;
 	}
-	.left {
-		width: 40%;
-	}
-	.right {
-		width: 40%;
-		height: 60vh;
-		justify-content: flex-start;
-		h4 {
-			margin-top: 50px;
+	.content {
+		.left {
+			width: 40%;
+			height: 80vh;
+			flex-direction: column-reverse;
+			justify-content: flex-end;
+			h2 {
+				margin-top: 15px;
+			}
+			h3 {
+				font-size: 2.2rem;
+				margin-bottom: 0;
+			}
+		}
+		.right {
+			width: 40%;
+			height: 80vh;
+			justify-content: flex-end;
+			flex-direction: column-reverse;
+			h4 {
+				margin-top: 23px;
+			}
+			.download__CV {
+				align-self: self-start;
+				margin-top: 16px;
+				.download__svg {
+					display: none;
+				}
+			}
 		}
 	}
+	.button__contact {
+		padding: 0;
+		height: 35px;
+		margin-top: 15px;
+		margin-left: -13px;
+	}
+
 	.switch {
 		display: flex;
 		flex-direction: column-reverse;
