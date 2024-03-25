@@ -61,9 +61,25 @@ header {
 	.header__container {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		height: 7vh;
 		padding-top: 2vh;
-
+		.logo__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 50px;
+			width: 200px;
+			.btn__language {
+				padding: 5px 8px;
+				border: 2px solid $accent;
+				border-radius: 10px;
+				font: inherit;
+				color: inherit;
+				background-color: transparent;
+				cursor: pointer;
+			}
+		}
 		.mail {
 			font-weight: 500;
 			font-size: 1.3rem;
@@ -536,6 +552,14 @@ footer {
 }
 
 @media (max-width: 1440px) {
+	header {
+		.header__container {
+			height: 7vh;
+			.logo__container {
+				width: 160px;
+			}
+		}
+	}
 	html {
 		font-size: 11px;
 	}
@@ -644,10 +668,20 @@ footer {
 	}
 }
 @media (max-width: 576px) {
-	.logo {
-		width: 40px;
-		height: 30px;
+	header {
+		.header__container {
+			height: 5vh;
+
+			.logo__container {
+				width: 90px;
+				.logo {
+					width: 40px;
+					height: 30px;
+				}
+			}
+		}
 	}
+
 	.modal {
 		.modal__container {
 			width: 94vw;
@@ -702,7 +736,7 @@ footer {
 		}
 	}
 	.button__contact {
-		padding: 0;
+		padding-top: 5px;
 		height: 35px;
 		margin-top: 15px;
 		margin-left: -13px;

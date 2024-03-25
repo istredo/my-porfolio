@@ -3,10 +3,12 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { themeLight, themeDark } from '../redux/slices/themeSlice'
 import { selectTheme } from '../redux/slices/themeSlice'
+import { useLang } from '../utils/useLang'
 
 const Footer = () => {
 	let toggleRef = React.useRef();
 	const { theme } = useSelector(selectTheme)
+	const { lang, translations } = useLang()
 	const dispatch = useDispatch()
 	const fillTheme = theme === 'light' ? '#232323' : '#dadee1'
 
@@ -40,7 +42,7 @@ const Footer = () => {
 					</div>
 					<div className="switch">
 						<input ref={toggleRef} onClick={themesHandler} type="checkbox" id="toggle__button" className="toggle__button" checked={theme === 'light' ? '' : 'checked'} onChange={() => { }} />
-						<label htmlFor="toggle__button" className="text">Switch theme</label>
+						<label htmlFor="toggle__button" className="text">{translations[lang].footer.switch}</label>
 					</div>
 
 				</div>

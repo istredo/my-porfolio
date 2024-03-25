@@ -1,31 +1,33 @@
 import React from 'react'
-
+import { useLang } from '../utils/useLang'
 const Content = () => {
+	const { lang, translations } = useLang()
 	return (
 		<section className='content'>
 			<div className="container">
 				<div className="content__container">
 					<div className="left">
 						<div className="left__top">
-							<h2>Hi, I'm <span>Andrey</span></h2>
-							<h3>Front-end developer</h3>
+							<h2>{translations[lang].main_page.content_hi}, {translations[lang].main_page.content_i} <span>{translations[lang].main_page.content_name}</span></h2>
+							<h3>{translations[lang].main_page.content_fe}</h3>
 						</div>
-						<button className='button__contact' href="https://t.me/istredo" target="_blank" rel="noopener noreferrer">
-							Contact me
+						<a className='button__contact' href="https://t.me/istredo" target="_blank" rel="noopener noreferrer">
+							{translations[lang].btn.contact}
 							<span className='button__line button__line--top'></span>
 							<span className='button__line button__line--right'></span>
 							<span className='button__line button__line--bottom'></span>
 							<span className='button__line button__line--left'></span>
-						</button>
+						</a>
 					</div>
 					<div className="right">
-						<h4 className='descVisible'>Are you looking for developer to your projects?<br />You can rely on me!</h4>
-						<button className='download__CV' href="/Uvarov_Andrey_Frotend.pdf" target="_blank" rel="noopener noreferrer" download>
-							Download CV
+						<h4 className='descVisible'>{translations[lang].main_page.content_info}<br />{translations[lang].main_page.content_rely}
+						</h4>
+						<a className='download__CV' href="/Uvarov_Andrey_Frotend.pdf" target="_blank" rel="noopener noreferrer" download>
+							{translations[lang].btn.cv}
 							<svg className='download__svg' xmlns="http://www.w3.org/2000/svg" width='40' fill="none" viewBox="0 0 24 24">
 								<path stroke="#009b77" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M21 21H3m15-10-6 6m0 0-6-6m6 6V3" />
 							</svg>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -34,3 +36,10 @@ const Content = () => {
 }
 
 export default Content
+
+
+
+
+
+
+

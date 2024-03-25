@@ -1,0 +1,52 @@
+{
+  "en": {
+    "header": {
+      "works": "my works",
+      "version": "Русский"
+    },
+    "footer": {
+      "switch": "Switch theme"
+    },
+    "btn": {
+      "contact": "Contact me",
+      "cv": "Download CV"
+    },
+    "main_page": {
+      "content_hi": "Hi",
+      "content_i": "I'm",
+      "content_name": "Andrey",
+      "content_fe": "Front-end developer",
+      "content_info": "Are you looking for developer to your projects?",
+      "content_rely": "You can rely on me!"
+    },
+    "modal": {
+      "project": "To project",
+      "git": "Github"
+    }
+  },
+  "ru": {
+    "header": {
+      "works": "проекты",
+      "version": "English"
+    },
+    "footer": {
+      "switch": "Сменить тему"
+    },
+    "btn": {
+      "contact": "Связаться",
+      "cv": "Скачать CV"
+    },
+    "main_page": {
+      "content_hi": "Привет",
+      "content_i": "меня зовут",
+      "content_name": "Андрей",
+      "content_fe": "Я Front-end разработчик",
+      "content_info": "Вы в поисках разработчика?",
+      "content_rely": "Можете на меня положиться!"
+    },
+    "modal": {
+      "project": "К проекту",
+      "git": "Github"
+    }
+  }
+}
