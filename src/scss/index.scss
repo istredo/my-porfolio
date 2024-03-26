@@ -55,6 +55,12 @@ a {
 	background-image: url(../../public/img/photo__light.png);
 }
 
+#light .footer__mobile {
+	background-color: rgba($white, $opacity);
+}
+#dark .footer__mobile {
+	background-color: rgba($black, $opacity);
+}
 // _____________ content __________________
 
 header {
@@ -264,7 +270,6 @@ footer {
 	left: 0;
 	right: 0;
 	padding: 2vh 0;
-	// background-color: rgba(0, 0, 0, 0.2);
 	a:hover {
 		filter: drop-shadow(0 0 2px $accent);
 	}
@@ -273,6 +278,10 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		svg {
+			height: 60px;
+			width: 60px;
+		}
 		.switch {
 			display: flex;
 			align-items: center;
@@ -546,7 +555,6 @@ footer {
 		padding-bottom: 2vh;
 		svg {
 			margin: 0 1vw;
-			width: 60px;
 		}
 	}
 }
@@ -666,6 +674,10 @@ footer {
 		top: 15vh;
 		right: 5vw;
 	}
+	footer .footer__container svg {
+		width: 40px;
+		height: 40px;
+	}
 }
 @media (max-width: 576px) {
 	header {
@@ -729,6 +741,7 @@ footer {
 			.download__CV {
 				align-self: self-start;
 				margin-top: 16px;
+				margin-left: 2px;
 				.download__svg {
 					display: none;
 				}
@@ -736,8 +749,10 @@ footer {
 		}
 	}
 	.button__contact {
-		padding-top: 5px;
+		width: 130px;
+		padding-top: 6px;
 		height: 35px;
+		font-size: 1.6rem;
 		margin-top: 15px;
 		margin-left: -13px;
 	}
