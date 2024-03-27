@@ -9,6 +9,7 @@
     },
     "btn": {
       "contact": "Contact me",
+      "mobile": "Contact",
       "cv": "Download CV"
     },
     "main_page": {
@@ -34,13 +35,14 @@
     },
     "btn": {
       "contact": "Связаться",
+      "mobile": "Связаться",
       "cv": "Скачать CV"
     },
     "main_page": {
       "content_hi": "Привет",
       "content_i": "меня зовут",
       "content_name": "Андрей",
-      "content_fe": "Я Front-end разработчик",
+      "content_fe": "Front-end разработчик",
       "content_info": "Вы в поисках разработчика?",
       "content_rely": "Можете на меня положиться!"
     },

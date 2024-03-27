@@ -22,7 +22,7 @@ const Content = () => {
 						{
 							windowWidth <= 600
 								? <a className='button__contact' target="_blank" rel="noopener noreferrer" onClick={() => contactBtn()} draggable='false'>
-									{translations[lang].btn.contact}
+									{translations[lang].btn.mobile}
 									<span className='button__line button__line--top'></span>
 									<span className='button__line button__line--right'></span>
 									<span className='button__line button__line--bottom'></span>

@@ -44,7 +44,7 @@ const Footer = () => {
 
 					</div>
 					<div className="switch">
-						<input ref={toggleRef} onClick={themesHandler} type="checkbox" id="toggle__button" className="toggle__button" checked={theme === 'light' ? '' : 'checked'} onChange={() => { }} />
+						<input ref={toggleRef} onClick={themesHandler} type="checkbox" id="toggle__button" className="toggle__button" checked={theme === 'light' ? '' : 'checked'} onChange={() => { }} draggable='false' />
 						<label htmlFor="toggle__button" className="text">{translations[lang].footer.switch}</label>
 					</div>
 

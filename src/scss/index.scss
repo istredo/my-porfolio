@@ -21,6 +21,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: bottom center;
+	transition: 1s;
 }
 .container {
 	width: $container-width;
@@ -302,6 +303,7 @@ footer {
 				appearance: none;
 				transition: 0.5s;
 				margin-right: 10px;
+				user-select: none;
 			}
 			.toggle__button::after {
 				content: "";
@@ -693,7 +695,6 @@ footer {
 			}
 		}
 	}
-
 	.modal {
 		.modal__container {
 			width: 94vw;
@@ -722,12 +723,19 @@ footer {
 			height: 80vh;
 			flex-direction: column-reverse;
 			justify-content: flex-end;
+			.left_top {
+				position: relative;
+			}
 			h2 {
 				margin-top: 15px;
+				line-height: 6rem;
 			}
 			h3 {
-				font-size: 2.2rem;
-				margin-bottom: 0;
+				position: absolute;
+				bottom: 4vh;
+				left: 0;
+				font-size: 2rem;
+				max-width: 150px;
 			}
 		}
 		.right {
@@ -748,6 +756,7 @@ footer {
 			}
 		}
 	}
+
 	.button__contact {
 		width: 130px;
 		padding-top: 6px;
