@@ -19,7 +19,6 @@ const Header = () => {
 					<a href="mailto:contact@istredo.fun" className="mail" style={{ color: `${theme === 'light' ? '#232323' : '#dadee1'}` }}>contact@istredo.fun</a>
 					<div className="nav" onClick={() => dispatch(modalOpen())}>{translations[lang].header.works}</div>
 				</div>
-				{/* <div className='header__circle'></div> */}
 			</div>
 		</header>
 	)

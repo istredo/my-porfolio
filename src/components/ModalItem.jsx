@@ -13,7 +13,6 @@ const ModalItem = (props) => {
 		<div className="modal__item" onClick={() => dispatch(descModalOpen(props.id))}>
 			<img className='modal__img' src={props.img} alt={props.title} />
 			<h4 className='modal__title'>{props.title}</h4>
-
 		</div>
 	)
 }
