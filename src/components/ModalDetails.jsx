@@ -20,6 +20,7 @@ const ModalDetails = () => {
 				<div className="details__container" >
 					<div className="details__picture" style={{ backgroundImage: `url(${list.img})` }}></div>
 					<h5 className='details__desc'>{description}</h5>
+					<span className='details__stack'>Stack: {list.stack}</span>
 					<div className="details__refs">
 						{
 							list.url ? <a className='details__url' href={list.url} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>{translations[lang].modal.project}</a> : ''

@@ -22,7 +22,8 @@
     },
     "modal": {
       "project": "To project",
-      "git": "Github"
+      "git": "Github",
+      "more": "More.."
     }
   },
   "ru": {
@@ -48,7 +49,8 @@
     },
     "modal": {
       "project": "К проекту",
-      "git": "Github"
+      "git": "Github",
+      "more": "Еще.."
     }
   }
 }

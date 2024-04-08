@@ -391,9 +391,16 @@ footer {
 		transform: scale(1);
 		transition: 0.5s ease-in;
 	}
-
+	.modal__more {
+		position: absolute;
+		color: $accent;
+		font-size: 1.2rem;
+		top: 15vh;
+		left: 15vw;
+	}
 	.list__container {
-		gap: 2vw;
+		gap: 4vw;
+		// margin-bottom: 60px;
 		.modal__item {
 			transition: 0.3s;
 			cursor: pointer;
@@ -432,7 +439,7 @@ footer {
 			}
 		}
 		.modal__item:hover {
-			transform: scale(0.95);
+			transform: scale(1.1);
 			transition: 0.8s;
 
 			.modal__title {
@@ -490,6 +497,12 @@ footer {
 			margin-bottom: 1vh;
 			max-width: 70vw;
 		}
+		.details__stack {
+			font-size: 1.2rem;
+			color: $white;
+			margin-bottom: 1vh;
+			max-width: 70vw;
+		}
 		.details__refs {
 			display: flex;
 			width: 50%;
@@ -535,7 +548,7 @@ footer {
 			justify-content: center;
 			align-items: center;
 			.modal__item {
-				max-width: 8vw;
+				max-width: 12vw;
 				height: 48vh;
 				.modal__desc {
 					height: 20%;
@@ -597,7 +610,7 @@ footer {
 		right: 5vw;
 	}
 	.modal__item {
-		width: 8vw;
+		width: 14vw;
 		height: 48vh;
 	}
 	.list__container {
@@ -633,10 +646,13 @@ footer {
 			width: 70vw;
 			height: 80vh;
 		}
-
+		.modal__more {
+			top: 85vh;
+			left: 91vw;
+		}
 		.modal__item {
-			width: 32vw;
-			height: 18vh;
+			width: 30vw;
+			height: 35vh;
 		}
 	}
 	.modal__closeBtn {
@@ -660,14 +676,14 @@ footer {
 		}
 		.list__container {
 			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
+			flex-wrap: nowrap;
+			flex-direction: column;
 			width: 74vw;
 			height: 85vh;
 		}
 
 		.modal__item {
-			width: 35vw;
+			width: 45vw;
 			height: 20vh;
 		}
 	}
@@ -697,18 +713,21 @@ footer {
 	.modal {
 		.modal__container {
 			width: 94vw;
-			height: 88vh;
+			height: 80vh;
 		}
 		.list__container {
 			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
+			// flex-wrap: wrap;
+			flex-direction: column;
 			width: 85vw;
 			height: 75vh;
 		}
-
+		.modal__more {
+			top: 3vh;
+			left: 15vw;
+		}
 		.modal__item {
-			width: 40vw;
+			width: 70vw;
 			height: 18vh;
 		}
 	}

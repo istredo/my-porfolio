@@ -3,10 +3,11 @@ import ModalItem from './ModalItem'
 import { useSelector, useDispatch } from 'react-redux'
 import { modalClose, selectModal } from '../redux/slices/modalSlice'
 import { modalList } from '../utils/modalList'
+import { useLang } from '../utils/useLang'
 
 
 const Modal = () => {
-
+	const { lang, translations } = useLang()
 	const { open } = useSelector(selectModal)
 	const dispatch = useDispatch()
 
@@ -19,10 +20,11 @@ const Modal = () => {
 				<div className={open ? 'modal__container itemActive' : 'modal__container'} onClick={e => e.stopPropagation()}>
 					<div className='list__container'>
 						{
-							modalList.map((item) => (<ModalItem key={item.title} id={item.id} title={item.title} description={item.description} url={item.url} img={item.img} />))
+							modalList.slice(0, 4).map((item) => (<ModalItem key={item.title} id={item.id} title={item.title} description={item.description} url={item.url} img={item.img} />))
 						}
 					</div>
 				</div>
+				<a href='https://github.com/istredo' className="modal__more" target="_blank" rel="noopener noreferrer">{translations[lang].modal.more}</a>
 			</div>
 		</aside >
 	)
