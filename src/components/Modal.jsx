@@ -20,7 +20,7 @@ const Modal = () => {
 				<div className={open ? 'modal__container itemActive' : 'modal__container'} onClick={e => e.stopPropagation()}>
 					<div className='list__container'>
 						{
-							modalList.slice(0, 4).map((item) => (<ModalItem key={item.title} id={item.id} title={item.title} description={item.description} url={item.url} img={item.img} />))
+							modalList.slice(0, 5).map((item) => (<ModalItem key={item.title} id={item.id} title={item.title} description={item.description} url={item.url} img={item.img} />))
 						}
 					</div>
 				</div>
